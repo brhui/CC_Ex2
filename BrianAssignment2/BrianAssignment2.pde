@@ -31,7 +31,7 @@ int ellipB = 36;
 
 void setup() {
   size(400, 400);
-  background(232, 255, 212);   // Background, Color 1.
+  background(232, 255, 212);
 }
 
 void draw() {
@@ -42,6 +42,7 @@ void draw() {
   rectR += 25;
   rectX += 50;
 
+  // This "if" block of code makes sure the rectangle prints downward if the X value exceeds the width of the sketch.
   if (rectX >= width) {
     rectX = 0;
     rectY += 50;
@@ -55,6 +56,8 @@ void draw() {
       rectB = 255;
     }
   }
+
+  // This "if" block ensures that the rectangle prints back to the original position if it exceeds the height of the sketch.
   if (rectY >= height) {
     rectX = 0;
     rectY = 177;
@@ -65,7 +68,7 @@ void draw() {
     }
   }
 
-  // CIRCLE
+  // CIRCLE - changes shape if ellipRand is equal to or above 2 and changes color if ellipRand is below 2.
   float ellipRand = random(0, 10);
   if (ellipRand >= 2) {
     ellipHeight = random(100);
@@ -86,12 +89,14 @@ void draw() {
     }
     println("ellipRand is below 2, adding color!");
   }
+
+  // This is the base circle
   strokeWeight(4);
   stroke(247, 147, 30);
   fill(ellipR, ellipG, ellipB);
   ellipse(200, 95, ellipWidth, ellipHeight);
 
-  // STAR
+  // STAR - no change fro assignment 1
   noStroke();
   fill(147, 39, 143);
   beginShape();
@@ -134,7 +139,7 @@ void draw() {
 }
 
 void mousePressed() {
-  // Arrows will move in either direction and change color.
+  // Arrows will move in either direction and change color when mouse is pressed.
   LAx1 = LAx1 - 30;
   LAx2 = LAx2 - 30;
   LAx3 = LAx3 - 30;
@@ -147,7 +152,7 @@ void mousePressed() {
   aG = aG + 25;
   aB = aB + 30;
 
-  // Random sized and colored rectangles will appear on every mouse click
+  // Random sized and colored rectangles will appear on every mouse press
   noStroke();
   fill(random(255), random(255), random(255));
   rect(mouseX, mouseY, random(40), random(40));
