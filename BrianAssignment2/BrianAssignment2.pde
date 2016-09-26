@@ -96,7 +96,7 @@ void draw() {
   fill(ellipR, ellipG, ellipB);
   ellipse(200, 95, ellipWidth, ellipHeight);
 
-  // STAR - no change fro assignment 1
+  // STAR - no change from assignment 1
   noStroke();
   fill(147, 39, 143);
   beginShape();
@@ -112,27 +112,27 @@ void draw() {
   vertex(192, 86);
   endShape(CLOSE);
 
-  // LEFT TRIANGLE
+  // LEFT TRIANGLE - no change from assignment 1
   noStroke();
   fill(0, 113, 188);
   triangle(25, 266, 175, 266, 100, 366);
 
-  // MIDDLE TRIANGLE
+  // MIDDLE TRIANGLE - no change from assignment 1
   noStroke();
   fill(0, 164, 255, 127);
   triangle(200, 266, 125, 366, 275, 366);
 
-  // RIGHT TRIANGLE
+  // RIGHT TRIANGLE - no change from assignment 1
   noStroke();
   fill(0, 113, 188);
   triangle(225, 266, 375, 266, 300, 366);
 
-  // LEFT ARROW
+  // LEFT ARROW - some values changed to global ints
   noStroke();
   fill(aR, aG, aB);
   quad(LAx1, 95, LAx2, 24, LAx3, 95, LAx4, 166);
 
-  // RIGHT ARROW
+  // RIGHT ARROW - some values changed to global ints
   noStroke();
   fill(aR, aG, aB);
   quad(RAx1, 95, RAx2, 24, RAx3, 95, RAx4, 166);
