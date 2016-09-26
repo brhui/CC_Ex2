@@ -140,21 +140,21 @@ void draw() {
 
 void mousePressed() {
   // Left Arrow moves left on mouse press.
-  LAx1 = LAx1 - 30;
-  LAx2 = LAx2 - 30;
-  LAx3 = LAx3 - 30;
-  LAx4 = LAx4 - 30;
+  LAx1 -= 30;
+  LAx2 -= 30;
+  LAx3 -= 30;
+  LAx4 -= 30;
   
   // Right Arrow moves right on mouse press.
-  RAx1 = RAx1 + 30;
-  RAx2 = RAx2 + 30;
-  RAx3 = RAx3 + 30;
-  RAx4 = RAx4 + 30;
+  RAx1 += 30;
+  RAx2 += 30;
+  RAx3 += 30;
+  RAx4 += 30;
   
   // Color changes on both arrows on mouse press.
-  aR = aR - 5;
-  aG = aG + 25;
-  aB = aB + 30;
+  aR -= 5;
+  aG += 25;
+  aB += 30;
 
   // Random sized and colored rectangles will appear on every mouse press
   noStroke();
